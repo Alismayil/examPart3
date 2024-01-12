@@ -1,0 +1,39 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex()
+
+.addPage{
+    background-color: gray;
+    @include MyFlex();
+    flex-direction: column;
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    .notMean{
+        margin-top: 100px;
+    }
+    thead{
+        th{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+    
+        }
+    }
+    tbody{
+        tr{
+            td{
+                width: 300px;
+                height: 100px;
+                border: 1px solid black;
+    
+            }
+    
+        }
+    }
+}

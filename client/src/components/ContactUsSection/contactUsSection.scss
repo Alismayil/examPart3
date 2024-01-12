@@ -1,0 +1,111 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex()
+
+#contactUsSection {
+    @include MyFlex();
+    padding: 50px;
+    flex-direction: column;
+
+    h1 {
+        font-size: 50px;
+        color: blue;
+        text-align: center;
+    }
+
+    .middleBox {
+        margin-top: 50px;
+        @include MyFlex();
+        flex-wrap: wrap;
+        gap: 30px;
+        font-size: 20px;
+
+        .littleBox {
+            width: 320px;
+            @include MyFlex();
+
+            flex-direction: column;
+            gap: 20px;
+            color: blue;
+
+            p {
+                font-size: 20px;
+                max-width: 90%;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .downBox {
+
+        form {
+            gap: 10px;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            input {
+                border-radius: 20px;
+                border: none;
+                padding: 10px 300px 10px 10px;
+                border: 1px solid black;
+                outline: none;
+
+                &:focus {
+                    border: 1px solid blue;
+
+                }
+            }
+            .namesBox {
+                @include MyFlex();
+                gap: 20px;
+                flex-wrap: wrap;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    input {
+                        border-radius: 20px;
+                        border: none;
+                        padding: 10px 300px 10px 10px;
+                        border: 1px solid black;
+                        outline: none;
+
+                        &:focus {
+                            border: 1px solid blue;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 577px) {
+    #contactUsSection {
+        .downBox {
+        text-align: center;
+            form {
+                @include MyFlex();
+                input {
+                 width: 250px;
+                 padding: 10px ;
+                }
+                .namesBox {
+                    div {
+                        input {
+                            width: 250px;
+                            padding: 10px ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

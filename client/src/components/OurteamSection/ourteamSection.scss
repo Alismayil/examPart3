@@ -1,0 +1,64 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex()
+
+#ourteamSection {
+    background-color: #f8f9fa;
+    @include MyFlex();
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 200px;
+
+    h1 {
+        font-size: 40px;
+        color: blue;
+    }
+
+    .prodctBox {
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        @include MyFlex();
+
+        .productCart {
+            width: 320px;
+            color: blue;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+
+            h1 {
+                font-size: 30px;
+                color: black;
+            }
+
+            p {
+                color: gray;
+                font-size: 20px;
+            }
+
+            i {
+                font-size: 45px;
+            }
+
+            button {
+                width: 100px;
+                color: blue;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                font-size: 15px;
+            }
+
+            button:hover {
+                color: black;
+            }
+        }
+    }
+}

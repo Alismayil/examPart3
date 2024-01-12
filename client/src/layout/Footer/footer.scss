@@ -1,0 +1,17 @@
+@mixin MyFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// @include MyFlex()
+
+
+footer{
+    background-color: #333333;
+    @include MyFlex();
+    padding: 100px 20px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
